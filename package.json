@@ -1,0 +1,24 @@
+{
+  "name": "docker-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "version": "changelog && git add -u",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkeLLLa/docker-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkeLLLa/docker-playground/issues"
+  },
+  "homepage": "https://github.com/SkeLLLa/docker-playground#readme",
+  "devDependencies": {
+    "generate-changelog": "^1.7.1"
+  }
+}

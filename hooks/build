@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+tag=$(git describe --abbrev=0 --tags)
+
+docker build --build-arg=OPENCV_VERSION=$tag -t $IMAGE_NAME .
