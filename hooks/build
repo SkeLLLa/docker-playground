@@ -6,4 +6,6 @@ version=${tag:1}
 # DOCKERFILE_PATH=sub/Dockerfile
 
 echo "docker build --build-arg=BUILD_ARG=${version} -t $IMAGE_NAME ."
+echo "$CACHE_TAG"
+exit 1
 docker build --build-arg=BUILD_ARG=$version --build-arg=OTHER_ARG=$version -t $IMAGE_NAME -f $DOCKERFILE_PATH .
