@@ -2,6 +2,7 @@
 
 tag=$(git describe --abbrev=0 --tags)
 version=${tag:1}
+IMAGE_NAME=ololo
 
 echo "docker build --build-arg=BUILD_ARG=${version} -t $IMAGE_NAME ."
-docker build --build-arg=BUILD_ARG=$version --build-arg=OTHER_ARG=$version -t $IMAGE_NAME .
+docker build --build-arg=BUILD_ARG=$version --build-arg=OTHER_ARG=$version -f $DOCKERFILE_PATH -t $IMAGE_NAME .
