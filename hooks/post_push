@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+tag=$(git describe --abbrev=0 --tags)
+version=${tag:1}
+
+curl -X POST https://cloud.docker.com/api/build/v1/source/33a3a785-e5d8-430d-9cd3-ed2de706cace/trigger/c129bf54-8d3e-4c9c-b54c-97130f8c5da7/call/
