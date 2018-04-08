@@ -2,10 +2,5 @@
 
 tag=$(git describe --abbrev=0 --tags)
 version=${tag:1}
-# IMAGE_NAME=ololo
-# DOCKERFILE_PATH=sub/Dockerfile
 
-echo "docker build --build-arg=BUILD_ARG=${version} -t $IMAGE_NAME ."
-echo "$CACHE_TAG"
-exit 1
-docker build --build-arg=BUILD_ARG=$version --build-arg=OTHER_ARG=$version -t $IMAGE_NAME -f $DOCKERFILE_PATH .
+docker build --build-arg=OPENCV_VERSION=$version -f $DOCKERFILE_PATH -t $IMAGE_NAME .
